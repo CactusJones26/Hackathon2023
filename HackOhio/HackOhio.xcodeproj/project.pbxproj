@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21101AE92AED7DE300099F67 /* GlobalNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21101AE82AED7DE300099F67 /* GlobalNavigationView.swift */; };
+		21101AF02AED8E2100099F67 /* Montserrat in Resources */ = {isa = PBXBuildFile; fileRef = 21101AEF2AED8E2100099F67 /* Montserrat */; };
 		E1CCAB092AED6F0A002D6772 /* HackOhioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CCAB082AED6F0A002D6772 /* HackOhioApp.swift */; };
 		E1CCAB0B2AED6F0A002D6772 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CCAB0A2AED6F0A002D6772 /* ContentView.swift */; };
 		E1CCAB0D2AED6F0B002D6772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CCAB0C2AED6F0B002D6772 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21101AE82AED7DE300099F67 /* GlobalNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalNavigationView.swift; sourceTree = "<group>"; };
+		21101AEF2AED8E2100099F67 /* Montserrat */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Montserrat; path = ../../../../Downloads/Montserrat; sourceTree = "<group>"; };
 		E1CCAB052AED6F0A002D6772 /* HackOhio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackOhio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CCAB082AED6F0A002D6772 /* HackOhioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackOhioApp.swift; sourceTree = "<group>"; };
 		E1CCAB0A2AED6F0A002D6772 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,9 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				E1CCAB082AED6F0A002D6772 /* HackOhioApp.swift */,
+				21101AEF2AED8E2100099F67 /* Montserrat */,
 				E1CCAB0A2AED6F0A002D6772 /* ContentView.swift */,
 				E1CCAB0C2AED6F0B002D6772 /* Assets.xcassets */,
 				E1CCAB0E2AED6F0B002D6772 /* Preview Content */,
+				21101AE82AED7DE300099F67 /* GlobalNavigationView.swift */,
 			);
 			path = HackOhio;
 			sourceTree = "<group>";
@@ -215,6 +221,9 @@
 				Base,
 			);
 			mainGroup = E1CCAAFC2AED6F0A002D6772;
+			packageReferences = (
+				21101AF12AED985200099F67 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = E1CCAB062AED6F0A002D6772 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CCAB102AED6F0B002D6772 /* Preview Assets.xcassets in Resources */,
+				21101AF02AED8E2100099F67 /* Montserrat in Resources */,
 				E1CCAB0D2AED6F0B002D6772 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21101AE92AED7DE300099F67 /* GlobalNavigationView.swift in Sources */,
 				E1CCAB0B2AED6F0A002D6772 /* ContentView.swift in Sources */,
 				E1CCAB092AED6F0A002D6772 /* HackOhioApp.swift in Sources */,
 			);
@@ -582,6 +593,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21101AF12AED985200099F67 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = E1CCAAFD2AED6F0A002D6772 /* Project object */;
 }

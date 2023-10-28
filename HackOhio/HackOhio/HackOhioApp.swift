@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct HackOhioApp: App {
+    @AppStorage("isUserLoggedIn") private var isUserLoggedIn = false
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isUserLoggedIn {
+                ActivationView()
+            } else {
+                LoginView()
+            }
+            
+            //GlobalNavigationView()
         }
     }
 }
