@@ -6,6 +6,10 @@ app.get('/greet', (req, res) => {
   res.json({ message: 'Hello from the backend!' });
 });
 
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 });
