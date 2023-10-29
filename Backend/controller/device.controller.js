@@ -1,13 +1,13 @@
 import express from "express";
 import Device from "../database/models/device.model.js";
-const SerialPort = require('serialport');
-const Readline = require('@serialport/parser-readline');
+import { SerialPort } from 'serialport';
+import Readline from '@serialport/parser-readline';
 
 
 const deviceController = express.Router();
 
 // Replace with your Arduino's serial port name
-const port = new SerialPort('/dev/tty-usbserial1', { baudRate: 9600 });
+const port = new SerialPort('/dev/cu.usbmodemXXXX', { baudRate: 9600 });
 
 // Create a parser to handle line breaks
 const parser = port.pipe(new Readline({ delimiter: '\n' }));
@@ -51,4 +51,4 @@ deviceController.post('/start-calibrating', (req, res) => {
     });
   });
 
-export default userController;
+export default deviceController;

@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import userController from "./controller/user.controller.js";
+import {userController, deviceController} from "./controller/index.js";
 import bodyParser from 'body-parser';
 const app = express();
 const port = 3000;
@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', userController);
+app.use('/', deviceController);
 
 app.get('/health', (req, res) => {
   res.json({ message: 'api is healthy' });
