@@ -51,6 +51,24 @@ struct ActivationView: View {
     @State private var showAlert = false
     @State private var isOn = false
     
+    func makeRequest(to endpoint: String) {
+            guard let url = URL(string: "http://localhost:3000/\(endpoint)") else {
+                print("Invalid URL")
+                return
+            }
+            
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            
+            URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Error: \(error)")
+                } else if let httpResponse = response as? HTTPURLResponse {
+                    print("Response status code: \(httpResponse.statusCode)")
+                }
+            }.resume()
+        }
+    
     var body: some View {
         ZStack {
             Image("dog")
@@ -69,6 +87,11 @@ struct ActivationView: View {
                 Button(action: {
                     isOn = !isOn
                     showAlert = true
+                    if !isOn {
+                        makeRequest(to: "turn-on")
+                    } else {
+                        makeRequest(to: "turn-off")
+                    }
                 }) {
                     Circle()
                         .frame(width: 130, height: 130)
